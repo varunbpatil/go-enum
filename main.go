@@ -33,7 +33,7 @@ func process(inputFile string) error {
 	}
 
 	ext := filepath.Ext(inputFile)
-	outputFile := strings.TrimSuffix(inputFile, ext) + "_enums.go"
+	outputFile := strings.TrimSuffix(inputFile, ext) + ".enums.go"
 
 	var buf bytes.Buffer
 	if err := generate(&buf, enums); err != nil {
